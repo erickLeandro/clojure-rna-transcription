@@ -1,0 +1,122 @@
+(:name "joao" :lastname "silva")
+{:name "joao" :lastname "silva"}
+(def lista [] {:name "joao" :lastname "silva"})
+(def lista {:name "joao" :lastname "silva"})
+(get lista :name) 
+(get lista :lastname) 
+(get lista lastname) 
+(def lista {name "joao" lastname "silva"})
+(def lista {:name "joao" :lastname "silva"})
+(get lista ":"lastname) 
+(get lista :lastname) 
+(def lista {name "joao" lastname "silva"})
+(def lista {"name" "joao" "lastname" "silva"})
+(get lista "lastname") 
+(def lista "ACGTGGTCTTAA")
+(.split lista)
+(apply hash-map (.split lista))
+(apply hash-map (lista))
+(seq lista)
+(map string? (seq lista))
+(map char? (seq lista))
+(def rna-list {
+  "C" "G"
+  "G" "C"
+  "A" "U"
+  "T" "A"
+})
+(def rna-mutable {})
+(conj rna-mutable "A")
+(def rna-mutable [])
+(conj rna-mutable "A")
+(conj rna-mutable "B")
+(conj rna-mutable! "B")
+(apply rna-mutable)
+(apply str rna-mutable)
+(rna-mutable
+)
+rna-mutable
+(conj rna-mutable "A")
+rna-mutable
+(swap! rna-mutable "A")
+(def rna-mutable (atom []))
+(swap! rna-mutable "A")
+(swap! rna-mutable assoc "A")
+(swap! rna-mutable assoc "A" "B")
+(swap! rna-mutable assoc "A" 0)
+(swap! rna-mutable assoc 0 1)
+rna-mutable
+(get rna-mutable 0)
+(get rna-mutable 1)
+(def rna-mutable [])
+(conj rna-mutable "A")
+rna-mutable
+(vec "ACGTGGTCTTAA")
+(map char? (vec "ACGTGGTCTTAA"))
+(map (fn [x] (x) (vec "ACGTGGTCTTAA"))
+(map (fn [x] (x) (vec "ACGTGGTCTTAA")))
+(map (fn [x] x (vec "ACGTGGTCTTAA")))
+(map (fn [x] (+ x 1) (vec "ACGTGGTCTTAA")))
+(map (fn [x] (+ x 1)) (vec "ACGTGGTCTTAA"))
+(map (fn [x] x) (vec "ACGTGGTCTTAA"))
+(map (fn [x] (conj rna-mutable x)) (vec "ACGTGGTCTTAA"))
+(map (fn [x] (conj rna-mutable! x)) (vec "ACGTGGTCTTAA"))
+(map (fn [x] (cons rna-mutable x)) (vec "ACGTGGTCTTAA"))
+(concat (take 8 (repeat "na")) ["Batman!"])
+; => ("na" "na" "na" "na" "na" "na" "na" "na" "Batman!")
+(concat (take 8 (repeat "na")) ["Batman!"])
+(rand-int 10)
+(rand-int 100)
+(defn my-into
+  [target additions]
+  (apply conj target additions))
+(conj [0] [1 2 3])
+(apply conj [0] [1 2 3])
+(char "A")
+(char "Aadasdas")
+(seq "Aadasdas")
+(def rna-list {
+  \C \G
+  \G \C
+  \A \U
+  \T \A
+})
+(get rna-list (seq element))
+(get rna-list \C)
+(get rna-list (char-array "dsasdaad"))
+(get rna-list (vec "dsasdaad"))
+(get rna-list (vec "a"))
+(get rna-list (vec "C"))
+(get rna-list (vec "G"))
+(map rna-list "G")
+(map rna-list "GA")
+(map rna-list "XCGFGGTDTTAA")
+(throw? "a")
+(thrown? "a")
+(nil? (apply str (map rna-list elements)))
+(nil? (apply str (map rna-list "dasddasadsdaads")))
+(apply str (map rna-list "dasddasadsdaads"))
+(apply str (map rna-list (vec "dasddasadsdaads")))
+(apply str (map rna-list (vec "C")))
+(apply str (map rna-list (vec "CA")))
+(apply str (map rna-list (vec "CAdasads")))
+(apply str (map rna-list (vec "CAdasadsAAAA")))
+(apply str (map rna-list (vec "kjndadlalkdasdkjkdakj")))
+(apply str (map rna-list (vec "XCGFGGTDTTAA")))
+(def rna-list {
+  \C \G
+  \G \C
+  \A \U
+  \T \A
+})
+(every? contains? (vec "XCGFGGTDTTAA"))
+(every? (contains? (vec "XCGFGGTDTTAA")))
+(every? contains? rna-list (vec "XCGFGGTDTTAA"))
+(every? (contains? rna-list (vec "XCGFGGTDTTAA")))
+(every? contains? rna-list (vec "XCGFGGTDTTAA"))
+(contains? rna-list (vec "XCGFGGTDTTAA"))
+(every? rna-list (vec "XCGFGGTDTTAA"))
+(every? rna-list (vec "A"))
+(every? rna-list (vec "AGC"))
+(every? rna-list (vec "CGAT"))
+(every? rna-list (vec "CGATX"))
