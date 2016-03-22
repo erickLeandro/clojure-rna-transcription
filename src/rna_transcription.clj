@@ -1,11 +1,19 @@
 (ns rna-transcription)
 
-(def rna-list {
+(def dna->rna {
   \C \G
   \G \C
   \A \U
   \T \A
 })
 
+(defn valid-strand? [elements]
+  (every? dna->rna elements))
+
+(defn translate-strand [elements]
+  (apply str (map dna->rna elements)))  
+
 (defn to-rna [elements]
-  (if (every? rna-list (vec elements)) (apply str (map rna-list (vec elements))) (throw (AssertionError.))))
+  (if (valid-strand? elements) 
+    (translate-strand elements)
+    (throw (AssertionError.))))

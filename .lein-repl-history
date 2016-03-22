@@ -120,3 +120,11 @@ rna-mutable
 (every? rna-list (vec "AGC"))
 (every? rna-list (vec "CGAT"))
 (every? rna-list (vec "CGATX"))
+(assoc {} "word" 1)
+(ends-with? \? "dadlasldsalk")
+(ends-with? "?" "dadlasldsalk")
+(ends-with? \? "dadlasldsalk")
+(ends-with? "?" "dadlasldsalk")
+(ends-with? "swapnil" "nil")
+(ends-with? s substr)
+exit
